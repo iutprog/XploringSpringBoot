@@ -1,5 +1,8 @@
 package com.continuouslearning.lab.exploring;
 
+import org.springframework.stereotype.Component;
+
+@Component 
 public class UbuntuPaymentService {
 
     public String pay(){
