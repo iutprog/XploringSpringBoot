@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ExploringApplication  implements  CommandLineRunner{
 
 	//@Autowired 
-	private final UbuntuPaymentService ubuntuPaymentService;
+	private final PaymentService paymentService;
 
-	ExploringApplication(UbuntuPaymentService ubuntuPaymentService) {
-		this.ubuntuPaymentService = ubuntuPaymentService;
+	ExploringApplication(PaymentService paymentService) {
+		this.paymentService = paymentService;
 	}
 
 	public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class ExploringApplication  implements  CommandLineRunner{
 	@Override 
 	public  void run(String... args) throws Exception{
 		//It runs after everything is done. It can hold non static variables and functions
-        String payString = ubuntuPaymentService.pay();
+        String payString = paymentService.pay();
 		System.out.println("Payment is completed : " + payString);
 	}
 

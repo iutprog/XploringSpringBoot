@@ -3,8 +3,9 @@ package com.continuouslearning.lab.exploring;
 import org.springframework.stereotype.Component;
 
 @Component 
-public class UbuntuPaymentService {
+public class UbuntuPaymentService implements PaymentService {
 
+    @Override 
     public String pay(){
 
         String payment = "Ubuntu payment ";
