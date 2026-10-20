@@ -8,11 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ExploringApplication  implements  CommandLineRunner{
 
-	private final  UbuntuPaymentService ubuntuPaymentService;
+	@Autowired 
+	private  UbuntuPaymentService ubuntuPaymentService;
 
-	ExploringApplication(UbuntuPaymentService ubuntuPaymentService) {
-		this.ubuntuPaymentService = ubuntuPaymentService;
-	}
+	// ExploringApplication(UbuntuPaymentService ubuntuPaymentService) {
+	// 	this.ubuntuPaymentService = ubuntuPaymentService;
+	// }
 
 	public static void main(String[] args) {
 		SpringApplication.run(ExploringApplication.class, args);
