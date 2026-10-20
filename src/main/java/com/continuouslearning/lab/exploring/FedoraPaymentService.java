@@ -1,5 +1,6 @@
 package com.continuouslearning.lab.exploring;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 // import org.springframework.stereotype.Controller;
 // import org.springframework.stereotype.Repository;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 // @RestController 
 // @Repository 
 // @Controller 
+@ConditionalOnProperty(name ="payment.provider", havingValue = "fedorapay")
 public class FedoraPaymentService implements PaymentService{
 
     @Override
